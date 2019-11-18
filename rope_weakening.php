@@ -40,6 +40,11 @@ class Rope
         return $this->getStrength() - $this->getStrengthAfterLoading();
     }
 
+    public function getMaximumWeight()
+    {
+        return $this->getStrengthAfterLoading() * 100;
+    }
+
     public function getResult()
     {
         if($this->getStrengthAfterLoading() === 0){
@@ -47,7 +52,8 @@ class Rope
         }
 
         return 'Current rope strength is ' . $this->getStrengthAfterLoading() . ' kN'.
-               "\nThe rope was weakened by " . $this->getDegreeOfWeakness() . ' kN';
+               "\nThe rope was weakened by " . $this->getDegreeOfWeakness() . ' kN'.
+               "\nThe maximum load is now " . $this->getMaximumWeight() . ' kg';
     }
 
     public function getKnotDivider($knot)
@@ -98,4 +104,3 @@ $knot          = "Skrajny tatrzański";    // example
 $rope = new Rope($rope_strength, $knot);
 
 print $rope->getResult();
-
