@@ -32,7 +32,8 @@ class Rope
             return 0;
         }
 
-        return $this->getStrength() - ($this->getStrength() * $this->getKnotDivider($this->knot));
+        $strength = $this->getStrength() - ($this->getStrength() * $this->getKnotDivider($this->knot));
+        return $strength;
     }
 
     public function getDegreeOfWeakness()
@@ -51,9 +52,9 @@ class Rope
             return "Absolute ban on use!";
         }
 
-        return 'Current rope strength is ' . $this->getStrengthAfterLoading() . ' kN'.
+        return 'Current rope strength is '   . $this->getStrengthAfterLoading() . ' kN'.
                "\nThe rope was weakened by " . $this->getDegreeOfWeakness() . ' kN'.
-               "\nThe maximum load is now " . $this->getMaximumWeight() . ' kg';
+               "\nThe maximum load is now "  . $this->getMaximumWeight() . ' kg';
     }
 
     public function getKnotDivider($knot)
