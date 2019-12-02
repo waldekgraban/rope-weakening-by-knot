@@ -100,7 +100,7 @@ class Rope
 }
 
 $rope_strength = 16.9;                     // example 16,9 kN
-$knot          = "Skrajny tatrzański";    // example
+$knot          = "Skrajny tatrzański";     // example
 
 $rope = new Rope($rope_strength, $knot);
 
