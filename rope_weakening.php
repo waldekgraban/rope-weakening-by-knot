@@ -7,7 +7,7 @@
 
 class Rope
 {
-    protected $strength; //16,9kN
+    protected $strength;
     protected $knot;
 
     public function __construct($strength, $knot)
