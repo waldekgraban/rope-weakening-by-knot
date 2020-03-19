@@ -53,8 +53,8 @@ class Rope
         }
 
         return 'Current rope strength is '   . $this->getStrengthAfterLoading() . ' kN'.
-               "\nThe rope was weakened by " . $this->getDegreeOfWeakness() . ' kN'.
-               "\nThe maximum load is now "  . $this->getMaximumWeight() . ' kg';
+               '\nThe rope was weakened by ' . $this->getDegreeOfWeakness() . ' kN'.
+               '\nThe maximum load is now '  . $this->getMaximumWeight() . ' kg';
     }
 
     public function getKnotDivider($knot)
